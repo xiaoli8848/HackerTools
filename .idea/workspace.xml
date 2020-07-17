@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f702918d-97dc-4858-853a-a5f050e3c8f0" name="默认的" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1en7SyD7k4P9VA1AaPzxmBtkMRJ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager">
+    <configuration name="WebToolsManger" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.HackerTools.WebToolsManger" />
+      <module name="HackerTools" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.HackerTools.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="应用程序.WebToolsManger" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f702918d-97dc-4858-853a-a5f050e3c8f0" name="默认的" comment="" />
+      <created>1594945506035</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1594945506035</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="541" y="275" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1594948910911">
+      <screen x="0" y="0" width="1620" height="1040" />
+    </state>
+    <state x="541" y="275" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1620.1040@0.0.1620.1040" timestamp="1594948910911" />
+    <state width="765" height="283" key="GridCell.Tab.0.bottom" timestamp="1594952423454">
+      <screen x="0" y="0" width="1620" height="1040" />
+    </state>
+    <state width="765" height="283" key="GridCell.Tab.0.bottom/0.0.1620.1040@0.0.1620.1040" timestamp="1594952423454" />
+    <state width="765" height="283" key="GridCell.Tab.0.center" timestamp="1594952423453">
+      <screen x="0" y="0" width="1620" height="1040" />
+    </state>
+    <state width="765" height="283" key="GridCell.Tab.0.center/0.0.1620.1040@0.0.1620.1040" timestamp="1594952423453" />
+    <state width="765" height="283" key="GridCell.Tab.0.left" timestamp="1594952423453">
+      <screen x="0" y="0" width="1620" height="1040" />
+    </state>
+    <state width="765" height="283" key="GridCell.Tab.0.left/0.0.1620.1040@0.0.1620.1040" timestamp="1594952423453" />
+    <state width="765" height="283" key="GridCell.Tab.0.right" timestamp="1594952423454">
+      <screen x="0" y="0" width="1620" height="1040" />
+    </state>
+    <state width="765" height="283" key="GridCell.Tab.0.right/0.0.1620.1040@0.0.1620.1040" timestamp="1594952423454" />
+    <state x="473" y="226" key="search.everywhere.popup" timestamp="1594945916750">
+      <screen x="0" y="0" width="1620" height="1040" />
+    </state>
+    <state x="473" y="226" key="search.everywhere.popup/0.0.1620.1040@0.0.1620.1040" timestamp="1594945916750" />
+  </component>
+</project>
