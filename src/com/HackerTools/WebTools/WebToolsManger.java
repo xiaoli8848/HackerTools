@@ -2,15 +2,11 @@ package com.HackerTools.WebTools;
 
 import javax.swing.*;
 import java.awt.*;
-import java.net.*;
 import java.io.*;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
-import Browser.JavaFX.Main;
-import com.HackerTools.WebTools.Utils;
+import java.net.InetAddress;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.UnknownHostException;
 
 /**
  * 程序主类，负责UI配置。
@@ -23,10 +19,8 @@ public class WebToolsManger {
     static int frame_height = (int) (800 * size);
 
     public static void main(String[] args) {
-        JFrame f = new JFrame("第一个Swing窗体");
+        JFrame f = new JFrame("HackerTools - WebToolsManger");
         f.setSize(frame_width, frame_height);
-        //imension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        //f.setSize((int)(Double.valueOf(screenSize.width)*0.5), (int)(Double.valueOf(screenSize.height)*0.5));
         f.setBackground(Color.WHITE);  // 将背景设置成白色
         f.setVisible(true);            // 让组件可见
     }
