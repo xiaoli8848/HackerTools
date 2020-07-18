@@ -10,8 +10,5 @@ import static com.sun.javafx.scene.control.skin.Utils.getResource;
  * @author LJ-silver
  */
 public class Test {
-    public static void main(String[] args) {
-        IPSeeker seeker = IPSeeker.getInstance();
-        System.out.println(seeker.getAddress("127.0.0.1"));
-    }
+
 }

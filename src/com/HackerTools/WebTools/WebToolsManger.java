@@ -9,6 +9,8 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import Browser.JavaFX.Main;
+import com.HackerTools.WebTools.Utils;
 
 /**
  * 程序主类，负责UI配置。
@@ -139,5 +141,16 @@ class getIP {
             }
             throw new IP_parse_Exception(0, "未知错误");
         }
+    }
+
+    public static String getIPLoc(String ip) {
+        /**
+         * 返回所给的IP地址的归属地
+         * @return 返回一个String变量，表示所给的IP地址的归属地
+         * @author XiaoLi8848
+         * @Time 2020-7-18 11:44
+         */
+        IPSeeker seeker = IPSeeker.getInstance();
+        return seeker.getAddress(ip);
     }
 }
