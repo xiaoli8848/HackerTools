@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="JavaFXApp.jnlp">
+  <information>
+    <title>JavaFXApp</title>
+    <vendor>Unknown</vendor>
+    <description>JavaFXApp</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Browser.jar" size="2510152" download="eager" />
+    <jar href="JavaFXApp.jar" size="5356147" download="eager" />
+    <jar href="commons-lang-2.6.jar" size="284220" download="eager" />
+    <jar href="di-spring-1.0.0.jar" size="12208" download="eager" />
+    <jar href="fastjson-1.2.72.jar" size="652606" download="eager" />
+    <jar href="hamcrest-core-1.3.jar" size="45024" download="eager" />
+    <jar href="junit-4.12.jar" size="314932" download="eager" />
+    <jar href="jxbrowser-7.9.jar" size="9937375" download="eager" />
+    <jar href="jxbrowser-javafx-7.9.jar" size="168534" download="eager" />
+    <jar href="jxbrowser-linux64-7.9.jar" size="71439633" download="eager" />
+    <jar href="jxbrowser-linux64-arm-7.9.jar" size="70415745" download="eager" />
+    <jar href="jxbrowser-mac-7.9.jar" size="81034955" download="eager" />
+    <jar href="jxbrowser-swing-7.9.jar" size="135554" download="eager" />
+    <jar href="jxbrowser-swt-7.9.jar" size="130698" download="eager" />
+    <jar href="jxbrowser-win32-7.9.jar" size="63190182" download="eager" />
+    <jar href="jxbrowser-win64-7.9.jar" size="65879051" download="eager" />
+    <jar href="license.jar" size="922" download="eager" />
+    <jar href="log4j-api-2.10.0.jar" size="255485" download="eager" />
+    <jar href="log4j-core-2.10.0.jar" size="1597622" download="eager" />
+    <jar href="slf4j-api-1.7.9.jar" size="32121" download="eager" />
+    <jar href="slf4j-api-1.8.0-alpha2.jar" size="43917" download="eager" />
+    <jar href="spring-beans-2.0.jar" size="366402" download="eager" />
+    <jar href="spring-boot-1.5.3.RELEASE.jar" size="670721" download="eager" />
+    <jar href="spring-boot-test-2.3.1.RELEASE.jar" size="214704" download="eager" />
+    <jar href="spring-test-5.2.7.RELEASE.jar" size="685510" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="600" height="400" main-class="sample.Main"  name="JavaFXApp" />
+  <update check="background"/>
+</jnlp>

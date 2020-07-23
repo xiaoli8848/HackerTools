@@ -20,7 +20,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f702918d-97dc-4858-853a-a5f050e3c8f0" name="默认的" comment="">
+      <change afterPath="$PROJECT_DIR$/browser/.idea/artifacts/JavaFXApp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/browser/src/com/HackerTools/browser/browser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Browser/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/browser/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Browser/.idea/artifacts/Browser_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Browser/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Browser/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Browser/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Browser/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Browser/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Browser/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Browser/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Browser/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Browser/Browser.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Browser/out/production/Browser/META-INF/Browser.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Browser/out/production/Browser/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Browser/src/Browser/JavaFX/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Browser/src/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/HackerTools/WebTools/IPEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/HackerTools/WebTools/IPLoc/IPEntry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/HackerTools/WebTools/IPSeeker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/HackerTools/WebTools/IPLoc/IPSeeker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/HackerTools/WebTools/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/HackerTools/WebTools/IPLoc/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/HackerTools/WebTools/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/HackerTools/WebTools/IPLoc/Utils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebToolsManger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebToolsManger.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,18 +65,23 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="模块" />
+    <property name="project.structure.last.edited" value="构件" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
-  <component name="RunManager">
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.HackerTools.WebTools.Test" />
+  <component name="RunManager" selected="应用程序.WebToolsManger">
+    <configuration name="WebToolsManger" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.HackerTools.WebTools.WebToolsManger" />
       <module name="HackerTools" />
       <extension name="coverage">
         <pattern>
@@ -67,9 +93,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Browser.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/libs/Browser.jar" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="应用程序.Test" />
+        <item itemvalue="应用程序.WebToolsManger" />
+        <item itemvalue="JAR 应用程序.Browser.jar" />
       </list>
     </recent_temporary>
   </component>
@@ -107,10 +138,14 @@
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
     <state x="541" y="275" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1620.1040@0.0.1620.1040" timestamp="1594948910911" />
-    <state x="225" y="286" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595033629334">
+    <state x="225" y="286" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595057193727">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
-    <state x="225" y="286" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1620.1040@0.0.1620.1040" timestamp="1595033629334" />
+    <state x="225" y="286" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1620.1040@0.0.1620.1040" timestamp="1595057193727" />
+    <state x="616" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1595053244885">
+      <screen x="0" y="0" width="1620" height="1040" />
+    </state>
+    <state x="616" y="225" key="#com.intellij.ide.util.MemberChooser/0.0.1620.1040@0.0.1620.1040" timestamp="1595053244885" />
     <state x="758" y="309" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1595043445310">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
@@ -119,41 +154,53 @@
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
     <state x="541" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1620.1040@0.0.1620.1040" timestamp="1595035687502" />
-    <state x="592" y="262" key="FileChooserDialogImpl" timestamp="1595043540811">
+    <state x="563" y="380" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1595506461539">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
-    <state x="592" y="262" key="FileChooserDialogImpl/0.0.1620.1040@0.0.1620.1040" timestamp="1595043540811" />
-    <state width="1576" height="162" key="GridCell.Tab.0.bottom" timestamp="1595036259187">
+    <state x="563" y="380" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1620.1040@0.0.1620.1040" timestamp="1595506461539" />
+    <state x="592" y="262" key="FileChooserDialogImpl" timestamp="1595487479642">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
-    <state width="1576" height="162" key="GridCell.Tab.0.bottom/0.0.1620.1040@0.0.1620.1040" timestamp="1595036259187" />
-    <state width="1576" height="162" key="GridCell.Tab.0.center" timestamp="1595036259187">
+    <state x="592" y="262" key="FileChooserDialogImpl/0.0.1620.1040@0.0.1620.1040" timestamp="1595487479642" />
+    <state width="1576" height="161" key="GridCell.Tab.0.bottom" timestamp="1595503807145">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
-    <state width="1576" height="162" key="GridCell.Tab.0.center/0.0.1620.1040@0.0.1620.1040" timestamp="1595036259187" />
-    <state width="1576" height="162" key="GridCell.Tab.0.left" timestamp="1595036259186">
+    <state width="1576" height="161" key="GridCell.Tab.0.bottom/0.0.1620.1040@0.0.1620.1040" timestamp="1595503807145" />
+    <state width="1576" height="161" key="GridCell.Tab.0.center" timestamp="1595503807144">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
-    <state width="1576" height="162" key="GridCell.Tab.0.left/0.0.1620.1040@0.0.1620.1040" timestamp="1595036259186" />
-    <state width="1576" height="162" key="GridCell.Tab.0.right" timestamp="1595036259187">
+    <state width="1576" height="161" key="GridCell.Tab.0.center/0.0.1620.1040@0.0.1620.1040" timestamp="1595503807144" />
+    <state width="1576" height="161" key="GridCell.Tab.0.left" timestamp="1595503807143">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
-    <state width="1576" height="162" key="GridCell.Tab.0.right/0.0.1620.1040@0.0.1620.1040" timestamp="1595036259187" />
-    <state x="507" y="93" key="SettingsEditor" timestamp="1595043707433">
+    <state width="1576" height="161" key="GridCell.Tab.0.left/0.0.1620.1040@0.0.1620.1040" timestamp="1595503807143" />
+    <state width="1576" height="161" key="GridCell.Tab.0.right" timestamp="1595503807144">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
-    <state x="507" y="93" key="SettingsEditor/0.0.1620.1040@0.0.1620.1040" timestamp="1595043707433" />
-    <state x="345" y="119" key="new project wizard" timestamp="1595039794364">
+    <state width="1576" height="161" key="GridCell.Tab.0.right/0.0.1620.1040@0.0.1620.1040" timestamp="1595503807144" />
+    <state x="507" y="93" key="SettingsEditor" timestamp="1595506497223">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
-    <state x="345" y="119" key="new project wizard/0.0.1620.1040@0.0.1620.1040" timestamp="1595039794364" />
+    <state x="507" y="93" key="SettingsEditor/0.0.1620.1040@0.0.1620.1040" timestamp="1595506497223" />
+    <state x="373" y="268" key="caller.chooser.dialog" timestamp="1595421539006">
+      <screen x="0" y="0" width="1620" height="1040" />
+    </state>
+    <state x="373" y="268" key="caller.chooser.dialog/0.0.1620.1040@0.0.1620.1040" timestamp="1595421539006" />
+    <state x="531" y="410" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1595506466940">
+      <screen x="0" y="0" width="1620" height="1040" />
+    </state>
+    <state x="531" y="410" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1620.1040@0.0.1620.1040" timestamp="1595506466940" />
+    <state x="345" y="119" key="new project wizard" timestamp="1595487494289">
+      <screen x="0" y="0" width="1620" height="1040" />
+    </state>
+    <state x="345" y="119" key="new project wizard/0.0.1620.1040@0.0.1620.1040" timestamp="1595487494289" />
     <state x="470" y="243" key="run.anything.popup" timestamp="1595032375817">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
     <state x="470" y="243" key="run.anything.popup/0.0.1620.1040@0.0.1620.1040" timestamp="1595032375817" />
-    <state x="475" y="228" width="672" height="678" key="search.everywhere.popup" timestamp="1595043833453">
+    <state x="478" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1595502560928">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
-    <state x="475" y="228" width="672" height="678" key="search.everywhere.popup/0.0.1620.1040@0.0.1620.1040" timestamp="1595043833453" />
+    <state x="478" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1620.1040@0.0.1620.1040" timestamp="1595502560928" />
   </component>
 </project>
