@@ -26,11 +26,7 @@ public class PHPInfo {
     }
 
     public static boolean Attack(WebToolsAPI API){
-        try {
-            API.openWebsite(new URL(API.url_now + "PHPInfo()"));
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
+        API.openWebsite(java.net.URI.create(API.url_now + "PHPInfo()"));
         API.writeLog("已尝试攻击PHPInfo漏洞");
         return true;
     }

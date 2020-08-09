@@ -4,6 +4,7 @@ import java.net.HttpURLConnection;
 import java.net.InetAddress;
 import java.net.MalformedURLException;
 import java.net.URL;
+import com.HackerTools.WebTools.WebTools.com.HackerTools.WebTools.OpenWebsite;
 
 public class WebToolsAPI extends com.HackerTools.WebTools.IP.getIP{
     public InetAddress ip_now;
@@ -22,11 +23,11 @@ public class WebToolsAPI extends com.HackerTools.WebTools.IP.getIP{
 
     }
 
-    public void openWebsite(URL url) {
-
+    public void openWebsite(java.net.URI uri) {
+        OpenWebsite.OpenWerbsite(uri);
     }
 
-    public boolean exists(String URLName) {
+    public boolean exists(String url) {
         try {
 
             //设置此类是否应该自动执行 HTTP 重定向（响应代码为 3xx 的请求）。
@@ -35,7 +36,7 @@ public class WebToolsAPI extends com.HackerTools.WebTools.IP.getIP{
 
             //到 URL 所引用的远程对象的连接
 
-            HttpURLConnection con = (HttpURLConnection) new URL(URLName)
+            HttpURLConnection con = (HttpURLConnection) new URL(url)
 
                     .openConnection();
 

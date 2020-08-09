@@ -105,6 +105,10 @@ public class WebToolsManger {
         ipLocLabel.setText(finalIpLocLabel.getText());
         main_Frame.add(ipParseButton);
 
+        //创建日志文本框
+        JTextArea LogText = new JTextArea(7,32);
+        LogText.setFont(font_Label);
+
         main_Frame.setVisible(true); //显示主窗体
 
     }
