@@ -4,7 +4,6 @@ import java.net.HttpURLConnection;
 import java.net.InetAddress;
 import java.net.MalformedURLException;
 import java.net.URL;
-import com.HackerTools.WebTools.WebTools.com.HackerTools.WebTools.OpenWebsite;
 
 public class WebToolsAPI extends com.HackerTools.WebTools.IP.getIP{
     public InetAddress ip_now;
@@ -19,8 +18,12 @@ public class WebToolsAPI extends com.HackerTools.WebTools.IP.getIP{
         }
     }
 
-    public void writeLog(String Log) {
+    public void writeLog(int type, String text) {
+        com.HackerTools.WebTools.WebToolsManager.Log_Append(type, text);
+    }
 
+    public void writeLog(String text) {
+        com.HackerTools.WebTools.WebToolsManager.Log_Append(text);
     }
 
     public void openWebsite(java.net.URI uri) {
@@ -60,3 +63,21 @@ public class WebToolsAPI extends com.HackerTools.WebTools.IP.getIP{
 
 }
 
+class OpenWebsite {
+    public static void OpenWerbsite(java.net.URI url) {
+        if (java.awt.Desktop.isDesktopSupported()) {
+            try {
+                // 获取当前系统桌面扩展
+                java.awt.Desktop dp = java.awt.Desktop.getDesktop();
+                // 判断系统桌面是否支持要执行的功能
+                if (dp.isSupported(java.awt.Desktop.Action.BROWSE)) {
+                    // 获取系统默认浏览器打开链接
+                    dp.browse(url);
+                }
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}

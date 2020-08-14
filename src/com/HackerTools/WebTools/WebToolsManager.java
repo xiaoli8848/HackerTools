@@ -1,13 +1,18 @@
 package com.HackerTools.WebTools;
 
 import com.HackerTools.WebTools.IP.getIP;
+import com.sun.istack.internal.Nullable;
+import org.apache.commons.lang.ObjectUtils;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.InetAddress;
 import java.net.UnknownHostException;
-
+import java.text.SimpleDateFormat;
+import java.time.*;
+import java.util.Date;
 import javax.swing.JFrame;
 
 /**
@@ -15,7 +20,7 @@ import javax.swing.JFrame;
  *
  * @author XiaoLi8848
  */
-public class WebToolsManger {
+public class WebToolsManager {
     static double size = 1.0;  //主窗体及控件大小缩放倍数
     static int frame_width = (int) (1000 * size);   //主窗体默认宽度
     static int frame_height = (int) (1000 * size);  //主窗体默认高度
@@ -23,11 +28,10 @@ public class WebToolsManger {
     static Font font_TitleLabel = new Font("宋体", Font.PLAIN, 30);  //标题字体
     static Font font_Label = new Font("宋体", Font.PLAIN, 25);  //标签字体
     static Font font_TextField = new Font("宋体", Font.PLAIN, 28); //文本框字体
+    static JFrame main_Frame = new JFrame(frame_Title); //创建主窗体
+    static JTextArea LogText = new JTextArea(7, 32);    //创建日志文本框
 
     public static void main(String[] args) {
-
-        //创建主窗体
-        JFrame main_Frame = new JFrame(frame_Title);
         main_Frame.setLayout(null); //使用绝对布局器
         main_Frame.setSize(frame_width, frame_height);
         main_Frame.setBackground(Color.WHITE);
@@ -96,6 +100,7 @@ public class WebToolsManger {
                 try {
                     finalIpLabel.setText(new getIP().getIP_byURL(ipTextField.getText()).getHostAddress());
                     finalIpLocLabel.setText(new getIP().getIPLoc(new getIP().getIP_byURL(ipTextField.getText()).getHostAddress()));
+                    ParseWebsite(finalIpLabel.getText());
                 } catch (UnknownHostException unknownHostException) {
                     unknownHostException.printStackTrace();
                 }
@@ -105,12 +110,71 @@ public class WebToolsManger {
         ipLocLabel.setText(finalIpLocLabel.getText());
         main_Frame.add(ipParseButton);
 
-        //创建日志文本框
-        JTextArea LogText = new JTextArea(7,32);
         LogText.setFont(font_Label);
-
+        LogText.setBounds(15, 400, 965, 500);
+        LogText.setLineWrap(true);
+        main_Frame.add(LogText);
         main_Frame.setVisible(true); //显示主窗体
 
+        Date date = new Date();
+        String time_now = dateToString(date);
+        LogText.append('[' + time_now + ']' + " " + "主窗体加载完毕");
+
     }
+
+    private static void ParseWebsite(String url) {
+        try {
+            InetAddress ip = InetAddress.getByName(url);
+            if (new com.HackerTools.WebTools.WebTools.com.HackerTools.WebTools.PHPInfo().Judge(new com.HackerTools.WebTools.WebToolsAPI(ip))) {
+                new com.HackerTools.WebTools.WebTools.com.HackerTools.WebTools.PHPInfo().Attack(new com.HackerTools.WebTools.WebToolsAPI(ip));
+            }
+            if (new com.HackerTools.WebTools.WebTools.com.HackerTools.WebTools.VCS().Judge(new com.HackerTools.WebTools.WebToolsAPI(ip))) {
+                new com.HackerTools.WebTools.WebTools.com.HackerTools.WebTools.VCS().Attack(new com.HackerTools.WebTools.WebToolsAPI(ip));
+            }
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void Log_Append(int type, String text) {
+        Date date = new Date();
+        String time_now = dateToString(date);
+        LogText.append("\n");
+
+        switch (type) {
+            case 1:
+                LogText.append('[' + time_now + ']' + " Info: " + text);
+                break;
+            case 2:
+                LogText.append('[' + time_now + ']' + " Error: " + text);
+                break;
+            case 3:
+                LogText.append('[' + time_now + ']' + " Warning: " + text);
+                break;
+            case 4:
+                LogText.append('[' + time_now + ']' + " Succeed: " + text);
+                break;
+            case 5:
+                LogText.append('[' + time_now + ']' + " Fail: " + text);
+                break;
+            case 0:
+            default:
+                LogText.append('[' + time_now + ']' + " " + text);
+                break;
+        }
+    }
+
+    public static void Log_Append(String text) {
+        Log_Append(0, text);
+    }
+
+    private static String dateToString(Date date) {
+        String str = "yyyy-MM-dd hh:mm:ss";
+        SimpleDateFormat format = new SimpleDateFormat(str);
+        String dateFormat = format.format(date);
+        return dateFormat;
+    }
+
+
 }
 
