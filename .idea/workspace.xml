@@ -20,11 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f702918d-97dc-4858-853a-a5f050e3c8f0" name="默认的" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebTools/com/HackerTools/WebTools/OpenWebsite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebTools/com/HackerTools/WebTools/VCS.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/HackerTools/WebTools/IPLoc/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebTools/com/HackerTools/WebTools/OpenWebsite.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebTools/com/HackerTools/WebTools/PHPInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebTools/com/HackerTools/WebTools/PHPInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebToolsAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebToolsAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebToolsManger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebToolsManger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebToolsManger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebToolsManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,9 +71,9 @@
       <recent name="com.HackerTools.WebTools.IP" />
     </key>
   </component>
-  <component name="RunManager" selected="应用程序.WebToolsManger">
-    <configuration name="WebToolsManger" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.HackerTools.WebTools.WebToolsManger" />
+  <component name="RunManager" selected="应用程序.WebToolsManager">
+    <configuration name="WebToolsManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.HackerTools.WebTools.WebToolsManager" />
       <module name="HackerTools" />
       <extension name="coverage">
         <pattern>
@@ -87,9 +89,13 @@
       <option name="JAR_PATH" value="$PROJECT_DIR$/libs/Browser.jar" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="JAR 应用程序.Browser.jar" />
+      <item itemvalue="应用程序.WebToolsManager" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="应用程序.WebToolsManger" />
+        <item itemvalue="应用程序.WebToolsManager" />
         <item itemvalue="JAR 应用程序.Browser.jar" />
       </list>
     </recent_temporary>
@@ -131,10 +137,10 @@
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
     <state x="541" y="275" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1620.1040@0.0.1620.1040" timestamp="1594948910911" />
-    <state x="225" y="286" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595057193727">
+    <state x="225" y="286" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597396769931">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
-    <state x="225" y="286" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1620.1040@0.0.1620.1040" timestamp="1595057193727" />
+    <state x="225" y="286" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1620.1040@0.0.1620.1040" timestamp="1597396769931" />
     <state x="616" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1595053244885">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
@@ -159,22 +165,22 @@
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
     <state x="592" y="262" key="FileChooserDialogImpl/0.0.1620.1040@0.0.1620.1040" timestamp="1595487479642" />
-    <state width="1576" height="160" key="GridCell.Tab.0.bottom" timestamp="1596425478281">
+    <state width="1576" height="158" key="GridCell.Tab.0.bottom" timestamp="1597397869993">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
-    <state width="1576" height="160" key="GridCell.Tab.0.bottom/0.0.1620.1040@0.0.1620.1040" timestamp="1596425478281" />
-    <state width="1576" height="160" key="GridCell.Tab.0.center" timestamp="1596425478281">
+    <state width="1576" height="158" key="GridCell.Tab.0.bottom/0.0.1620.1040@0.0.1620.1040" timestamp="1597397869993" />
+    <state width="1576" height="158" key="GridCell.Tab.0.center" timestamp="1597397869993">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
-    <state width="1576" height="160" key="GridCell.Tab.0.center/0.0.1620.1040@0.0.1620.1040" timestamp="1596425478281" />
-    <state width="1576" height="160" key="GridCell.Tab.0.left" timestamp="1596425478280">
+    <state width="1576" height="158" key="GridCell.Tab.0.center/0.0.1620.1040@0.0.1620.1040" timestamp="1597397869993" />
+    <state width="1576" height="158" key="GridCell.Tab.0.left" timestamp="1597397869993">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
-    <state width="1576" height="160" key="GridCell.Tab.0.left/0.0.1620.1040@0.0.1620.1040" timestamp="1596425478280" />
-    <state width="1576" height="160" key="GridCell.Tab.0.right" timestamp="1596425478281">
+    <state width="1576" height="158" key="GridCell.Tab.0.left/0.0.1620.1040@0.0.1620.1040" timestamp="1597397869993" />
+    <state width="1576" height="158" key="GridCell.Tab.0.right" timestamp="1597397869993">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
-    <state width="1576" height="160" key="GridCell.Tab.0.right/0.0.1620.1040@0.0.1620.1040" timestamp="1596425478281" />
+    <state width="1576" height="158" key="GridCell.Tab.0.right/0.0.1620.1040@0.0.1620.1040" timestamp="1597397869993" />
     <state x="507" y="93" key="SettingsEditor" timestamp="1595506497223">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
@@ -195,9 +201,9 @@
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
     <state x="470" y="243" key="run.anything.popup/0.0.1620.1040@0.0.1620.1040" timestamp="1595032375817" />
-    <state x="478" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1595502560928">
+    <state x="481" y="234" width="672" height="678" key="search.everywhere.popup" timestamp="1597395157939">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
-    <state x="478" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1620.1040@0.0.1620.1040" timestamp="1595502560928" />
+    <state x="481" y="234" width="672" height="678" key="search.everywhere.popup/0.0.1620.1040@0.0.1620.1040" timestamp="1597395157939" />
   </component>
 </project>
