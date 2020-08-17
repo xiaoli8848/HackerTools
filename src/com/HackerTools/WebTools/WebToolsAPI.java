@@ -1,18 +1,34 @@
 package com.HackerTools.WebTools;
 
-import java.net.HttpURLConnection;
-import java.net.InetAddress;
-import java.net.MalformedURLException;
-import java.net.URL;
+import com.HackerTools.WebTools.IP.getIP;
+
+import java.net.*;
 
 public class WebToolsAPI extends com.HackerTools.WebTools.IP.getIP{
     public InetAddress ip_now;
     public URL url_now;
 
-    public WebToolsAPI(InetAddress ip) {
-        this.ip_now = ip;
+    public WebToolsAPI(String url,int port) {
         try {
-            this.url_now = new URL("http://" + ip_now.getHostAddress() + "/");
+            this.ip_now = new getIP().getIP_byURL(url);
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+        }
+        try {
+            this.url_now = new URL("http://"+ url + ":" + port);
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public WebToolsAPI(String url) {
+        try {
+            this.ip_now = new getIP().getIP_byURL(url);
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+        }
+        try {
+            this.url_now = new URL("http://"+ url);
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
@@ -27,7 +43,7 @@ public class WebToolsAPI extends com.HackerTools.WebTools.IP.getIP{
     }
 
     public void openWebsite(java.net.URI uri) {
-        OpenWebsite.OpenWerbsite(uri);
+        OpenWebsite.OpenWebsite(uri);
     }
 
     public boolean exists(String url) {
@@ -64,7 +80,7 @@ public class WebToolsAPI extends com.HackerTools.WebTools.IP.getIP{
 }
 
 class OpenWebsite {
-    public static void OpenWerbsite(java.net.URI url) {
+    public static void OpenWebsite(java.net.URI url) {
         if (java.awt.Desktop.isDesktopSupported()) {
             try {
                 // 获取当前系统桌面扩展
