@@ -16,9 +16,12 @@ import java.net.UnknownHostException;
 import java.nio.file.Files;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import javax.swing.JFrame;
 import java.nio.file.attribute.FileTime;
+
+import static com.HackerTools.WebTools.ClassLoader.GetClass;
 
 /**
  * 程序主类，负责UI配置。
@@ -103,24 +106,70 @@ public class WebToolsManager {
         JLabel finalIpLocLabel = ipLocLabel;
         ipParseButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                if(!new WebToolsAPI("").exists(ipTextField.getText())){    //创建一个url为空的API实例，判断输入的数据的有效性
+                /*try {
+                    if(!new WebToolsAPI("").exists(ipTextField.getText()) && new getIP().getIP_byURL("http://" + ipTextField.getText())==null){    //创建一个url为空的API实例，判断输入的数据的有效性
+                        Log_Append(5,"无法访问该URL或该主机名或该IP");
+                        return;
+                    }
+                } catch (UnknownHostException unknownHostException) {
                     Log_Append(5,"无法访问该URL或该主机名或该IP");
-                    return;
+                }*/
+                try {
+                    if(!new WebToolsAPI("").exists(new URL(ipTextField.getText()).toString())){
+                        Log_Append(3,"无法访问该URL或该主机名或该IP");
+                    }
+                } catch (MalformedURLException malformedURLException) {
+                    try {
+                        if(!new WebToolsAPI("").exists(new URL("http://" + ipTextField.getText()).toString())){
+                            Log_Append(3,"无法访问该URL或该主机名或该IP");
+                        }
+                    } catch (MalformedURLException urlException) {
+                        Log_Append(3,"该URL或该主机名或该IP无效");
+                    }
                 }
                 try {
-                    finalIpLabel.setText(new getIP().getIP_byURL(ipTextField.getText()).getHostAddress());
-                    finalIpLocLabel.setText(new getIP().getIPLoc(new getIP().getIP_byURL(ipTextField.getText()).getHostAddress()));
                     try {
-                        if(new URL(ipTextField.getText()).getPort() == -1){ //如果没有端口号
+                        finalIpLabel.setText(new getIP().getIP_byURL(new URL(ipTextField.getText()).getHost()).getHostAddress());
+                    } catch (MalformedURLException malformedURLException) {
+                        try {
+                            finalIpLabel.setText(new getIP().getIP_byURL(new URL("http://" + ipTextField.getText()).getHost()).getHostAddress());
+                        } catch (MalformedURLException urlException) {
+                            urlException.printStackTrace();
+                        }
+                    }
+                    try {
+                        finalIpLocLabel.setText(new getIP().getIPLoc(new getIP().getIP_byURL(new URL(ipTextField.getText()).getHost()).getHostAddress()));
+                    } catch (MalformedURLException malformedURLException) {
+                        try {
+                            finalIpLocLabel.setText(new getIP().getIPLoc(new getIP().getIP_byURL(new URL("http://" + ipTextField.getText()).getHost()).getHostAddress()));
+                        } catch (MalformedURLException urlException) {
+                            urlException.printStackTrace();
+                        }
+                    }
+                    try {
+                        if (new URL(ipTextField.getText()).getPort() == -1) { //如果没有端口号
                             ParseWebsite(finalIpLabel.getText());
-                        }else {
+                        } else {
                             ParseWebsite(finalIpLabel.getText(), new URL(ipTextField.getText()).getPort());
                         }
                     } catch (MalformedURLException malformedURLException) {
-                        malformedURLException.printStackTrace();
+                        try {
+                            if (new URL("http://" + ipTextField.getText()).getPort() == -1) { //如果没有端口号
+                                ParseWebsite(finalIpLabel.getText());
+                            } else {
+                                ParseWebsite(finalIpLabel.getText(), new URL(ipTextField.getText()).getPort());
+                            }
+                        } catch (MalformedURLException urlException) {
+                            try {
+                                ParseWebsite(finalIpLabel.getText(), new URL("http://" + ipTextField.getText()).getPort());
+                            } catch (MalformedURLException exception) {
+                                exception.printStackTrace();
+                            }
+                        }
                     }
                 } catch (UnknownHostException unknownHostException) {
                     unknownHostException.printStackTrace();
+
                 }
             }
         });
@@ -173,12 +222,14 @@ public class WebToolsManager {
          * @author XiaoLi8848
          * @Time 2020-8-14 18:17
          */
-        if (new PHPInfo().Judge(new WebToolsAPI(url, port))) {
-            new PHPInfo().Attack(new WebToolsAPI(url, port));
-        }
-        if (new VCS().Judge(new WebToolsAPI(url, port))) {
-            new VCS().Attack(new WebToolsAPI(url, port));
-        }
+        /*java.util.List<Class> c = GetClass("com.HackerTools.WebTools.WebTools.WebTools_BUG");
+        for(int i=0;i<c.size();i++){
+            Class cl = c.get(i);
+            //TODO 实例化类并调用Judge、Attack方法
+        }*/
+        WebToolsAPI API = new WebToolsAPI(url, port);
+        new PHPInfo().Attack(API,new PHPInfo().Judge(API));
+        new VCS().Attack(API,new VCS().Judge(API));
     }
 
     private static void ParseWebsite(String url) {
@@ -187,12 +238,14 @@ public class WebToolsManager {
          * @author XiaoLi8848
          * @Time 2020-8-14 18:17
          */
-        if (new PHPInfo().Judge(new WebToolsAPI(url))) {
-            new PHPInfo().Attack(new WebToolsAPI(url));
-        }
-        if (new VCS().Judge(new WebToolsAPI(url))) {
-            new VCS().Attack(new WebToolsAPI(url));
-        }
+        /*java.util.List<Class> c = GetClass("com.HackerTools.WebTools.WebTools.WebTools_BUG");
+        for(int i=0;i<c.size();i++){
+            Class cl = c.get(i);
+            //TODO 实例化类并调用Judge、Attack方法
+        }*/
+        WebToolsAPI API = new WebToolsAPI(url);
+        new PHPInfo().Attack(API,new PHPInfo().Judge(API));
+        new VCS().Attack(API,new VCS().Judge(API));
     }
 
     public static void Log_Append(int type, String text) {
@@ -244,6 +297,7 @@ public class WebToolsManager {
         String dateFormat = format.format(date);
         return dateFormat;
     }
+
 }
 
 // TODO：使用本类读取当前IP地址数据库的修改时间，实现自动检测数据库版本

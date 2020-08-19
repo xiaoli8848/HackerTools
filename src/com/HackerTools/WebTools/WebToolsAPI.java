@@ -1,6 +1,7 @@
 package com.HackerTools.WebTools;
 
 import com.HackerTools.WebTools.IP.getIP;
+import com.HackerTools.WebTools.WebTools.WebTools_BUG;
 
 import java.net.*;
 
@@ -8,14 +9,14 @@ public class WebToolsAPI extends com.HackerTools.WebTools.IP.getIP{
     public InetAddress ip_now;
     public URL url_now;
 
-    public WebToolsAPI(String url,int port) {
+    public WebToolsAPI(String url, int port) {
         try {
             this.ip_now = new getIP().getIP_byURL(url);
         } catch (UnknownHostException e) {
             e.printStackTrace();
         }
         try {
-            this.url_now = new URL("http://"+ url + ":" + port);
+            this.url_now = new URL("http://" + url + ":" + port);
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
@@ -28,7 +29,7 @@ public class WebToolsAPI extends com.HackerTools.WebTools.IP.getIP{
             e.printStackTrace();
         }
         try {
-            this.url_now = new URL("http://"+ url);
+            this.url_now = new URL("http://" + url);
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
@@ -62,19 +63,13 @@ public class WebToolsAPI extends com.HackerTools.WebTools.IP.getIP{
             /* 设置 URL 请求的方法， GET POST HEAD OPTIONS PUT DELETE TRACE 以上方法之一是合法的，具体取决于协议的限制。*/
 
             con.setRequestMethod("HEAD");
-
+            con.setConnectTimeout(1500);
+            con.setReadTimeout(1500);
             //从 HTTP 响应消息获取状态码
-
             return (con.getResponseCode() == HttpURLConnection.HTTP_OK);
-
-        } catch (Exception e) {
-
-            e.printStackTrace();
-
+        } catch (java.lang.Throwable e){
             return false;
-
         }
-
     }
 
 }

@@ -61,7 +61,11 @@ public class getIP {
                 } catch (UnknownHostException o) {
                     throw new getIP.IP_parse_Exception(2, "网络错误");
                 }
-                throw new getIP.IP_parse_Exception(1, "提供的URL或主机名非法");
+                try {
+                    return InetAddress.getByName(surl);
+                }catch(UnknownHostException er){
+                    throw new getIP.IP_parse_Exception(1, "提供的URL或主机名非法");
+                }
             }
         }
     }
