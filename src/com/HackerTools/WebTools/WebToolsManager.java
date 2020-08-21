@@ -1,6 +1,7 @@
 package com.HackerTools.WebTools;
 
 import com.HackerTools.WebTools.IP.getIP;
+import com.HackerTools.WebTools.WebTools.WebTools_BUG;
 import com.HackerTools.WebTools.WebTools.com.HackerTools.WebTools.BUG.PHPInfo;
 import com.HackerTools.WebTools.WebTools.com.HackerTools.WebTools.BUG.VCS;
 
@@ -29,17 +30,17 @@ import static com.HackerTools.WebTools.ClassLoader.GetClass;
  * @author XiaoLi8848
  */
 public class WebToolsManager {
-    static double size = 1.0;  //主窗体及控件大小缩放倍数
-    static int frame_width = (int) (1000 * size);   //主窗体默认宽度
-    static int frame_height = (int) (1000 * size);  //主窗体默认高度
-    static String frame_Title = "WebToolsManager - 主菜单";   //窗体标题
+    private static double size = 1.0;  //主窗体及控件大小缩放倍数
+    private static int frame_width = (int) (1000 * size);   //主窗体默认宽度
+    private static int frame_height = (int) (1000 * size);  //主窗体默认高度
+    private static String frame_Title = "WebToolsManager - 主菜单";   //窗体标题
     static Font font_TitleLabel = new Font("宋体", Font.PLAIN, 30);  //标题字体
     static Font font_Label = new Font("宋体", Font.PLAIN, 25);  //标签字体
     static Font font_TextField = new Font("宋体", Font.PLAIN, 28); //文本框字体
     static JFrame main_Frame = new JFrame(frame_Title); //创建主窗体
-    static JTextField ipTextField = new JTextField("http://www.baidu.com"); //创建IP地址输入框
-    static JTextArea LogText = new JTextArea(7, 32);    //创建日志文本框
-    static final String VERSION_IP_LOC_DATABASE = "2020年 08月 10日 星期一 22:11:56 CST"; //IP地理位置数据库更新时间
+    private static JTextField ipTextField = new JTextField("http://www.baidu.com"); //创建IP地址输入框
+    private static JTextArea LogText = new JTextArea(7, 32);    //创建日志文本框
+    private static final String VERSION_IP_LOC_DATABASE = "2020年 08月 10日 星期一 22:11:56 CST"; //IP地理位置数据库更新时间
 
     public static void main(String[] args) {
         main_Frame.setLayout(null); //使用绝对布局器
@@ -222,14 +223,23 @@ public class WebToolsManager {
          * @author XiaoLi8848
          * @Time 2020-8-14 18:17
          */
-        /*java.util.List<Class> c = GetClass("com.HackerTools.WebTools.WebTools.WebTools_BUG");
+        WebToolsAPI API = new WebToolsAPI(url, port);
+        java.util.List<Class> c = GetClass("com.HackerTools.WebTools.WebTools.WebTools_BUG");
         for(int i=0;i<c.size();i++){
             Class cl = c.get(i);
+            try {
+                try {
+                    WebTools_BUG cs = (WebTools_BUG)Class.forName(cl.getName()).newInstance();
+                    cs.Attack(API,cs.Judge(API));
+                } catch (InstantiationException e) {
+                    e.printStackTrace();
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                }
+            } catch (ClassNotFoundException e) {
+            }
             //TODO 实例化类并调用Judge、Attack方法
-        }*/
-        WebToolsAPI API = new WebToolsAPI(url, port);
-        new PHPInfo().Attack(API,new PHPInfo().Judge(API));
-        new VCS().Attack(API,new VCS().Judge(API));
+        }
     }
 
     private static void ParseWebsite(String url) {
@@ -238,14 +248,23 @@ public class WebToolsManager {
          * @author XiaoLi8848
          * @Time 2020-8-14 18:17
          */
-        /*java.util.List<Class> c = GetClass("com.HackerTools.WebTools.WebTools.WebTools_BUG");
+        WebToolsAPI API = new WebToolsAPI(url);
+        java.util.List<Class> c = GetClass("com.HackerTools.WebTools.WebTools.WebTools_BUG");
         for(int i=0;i<c.size();i++){
             Class cl = c.get(i);
+            try {
+                try {
+                    WebTools_BUG cs = (WebTools_BUG)Class.forName(cl.getName()).newInstance();
+                    cs.Attack(API,cs.Judge(API));
+                } catch (InstantiationException e) {
+                    e.printStackTrace();
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                }
+            } catch (ClassNotFoundException e) {
+            }
             //TODO 实例化类并调用Judge、Attack方法
-        }*/
-        WebToolsAPI API = new WebToolsAPI(url);
-        new PHPInfo().Attack(API,new PHPInfo().Judge(API));
-        new VCS().Attack(API,new VCS().Judge(API));
+        }
     }
 
     public static void Log_Append(int type, String text) {

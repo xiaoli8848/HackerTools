@@ -20,16 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f702918d-97dc-4858-853a-a5f050e3c8f0" name="默认的" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/HackerTools/WebTools/ClassLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebTools/WebTools_BUG.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/手册.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HackerTools.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HackerTools.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/qqwry.dat" beforeDir="false" afterPath="$PROJECT_DIR$/libs/qqwry.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/HackerTools/WebTools/IP/getIP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/HackerTools/WebTools/IP/getIP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/HackerTools/WebTools/ClassLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/HackerTools/WebTools/ClassLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebTools/WebTools_BUG.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebTools/WebTools_BUG.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebTools/com/HackerTools/WebTools/BUG/PHPInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebTools/com/HackerTools/WebTools/BUG/PHPInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebTools/com/HackerTools/WebTools/BUG/VCS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebTools/com/HackerTools/WebTools/BUG/VCS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebToolsAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebToolsAPI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebToolsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebToolsManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -151,10 +147,10 @@
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
     <state x="273" y="221" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1620.1040@0.0.1620.1040" timestamp="1597799898947" />
-    <state x="616" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1595053244885">
+    <state x="616" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1598007651031">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
-    <state x="616" y="225" key="#com.intellij.ide.util.MemberChooser/0.0.1620.1040@0.0.1620.1040" timestamp="1595053244885" />
+    <state x="616" y="225" key="#com.intellij.ide.util.MemberChooser/0.0.1620.1040@0.0.1620.1040" timestamp="1598007651031" />
     <state x="758" y="309" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1595043445310">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
@@ -175,22 +171,22 @@
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
     <state x="592" y="262" key="FileChooserDialogImpl/0.0.1620.1040@0.0.1620.1040" timestamp="1597629854914" />
-    <state width="1562" height="159" key="GridCell.Tab.0.bottom" timestamp="1597802057698">
+    <state width="1562" height="159" key="GridCell.Tab.0.bottom" timestamp="1598007968625">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
-    <state width="1562" height="159" key="GridCell.Tab.0.bottom/0.0.1620.1040@0.0.1620.1040" timestamp="1597802057698" />
-    <state width="1562" height="159" key="GridCell.Tab.0.center" timestamp="1597802057692">
+    <state width="1562" height="159" key="GridCell.Tab.0.bottom/0.0.1620.1040@0.0.1620.1040" timestamp="1598007968625" />
+    <state width="1562" height="159" key="GridCell.Tab.0.center" timestamp="1598007968624">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
-    <state width="1562" height="159" key="GridCell.Tab.0.center/0.0.1620.1040@0.0.1620.1040" timestamp="1597802057692" />
-    <state width="1562" height="159" key="GridCell.Tab.0.left" timestamp="1597802057691">
+    <state width="1562" height="159" key="GridCell.Tab.0.center/0.0.1620.1040@0.0.1620.1040" timestamp="1598007968624" />
+    <state width="1562" height="159" key="GridCell.Tab.0.left" timestamp="1598007968623">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
-    <state width="1562" height="159" key="GridCell.Tab.0.left/0.0.1620.1040@0.0.1620.1040" timestamp="1597802057691" />
-    <state width="1562" height="159" key="GridCell.Tab.0.right" timestamp="1597802057694">
+    <state width="1562" height="159" key="GridCell.Tab.0.left/0.0.1620.1040@0.0.1620.1040" timestamp="1598007968623" />
+    <state width="1562" height="159" key="GridCell.Tab.0.right" timestamp="1598007968625">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
-    <state width="1562" height="159" key="GridCell.Tab.0.right/0.0.1620.1040@0.0.1620.1040" timestamp="1597802057694" />
+    <state width="1562" height="159" key="GridCell.Tab.0.right/0.0.1620.1040@0.0.1620.1040" timestamp="1598007968625" />
     <state width="1562" height="344" key="GridCell.Tab.1.bottom" timestamp="1597722325744">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
@@ -227,9 +223,9 @@
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
     <state x="470" y="243" key="run.anything.popup/0.0.1620.1040@0.0.1620.1040" timestamp="1595032375817" />
-    <state x="482" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1597400275333">
+    <state x="482" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1598007024444">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
-    <state x="482" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1620.1040@0.0.1620.1040" timestamp="1597400275333" />
+    <state x="482" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1620.1040@0.0.1620.1040" timestamp="1598007024444" />
   </component>
 </project>

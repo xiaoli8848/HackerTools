@@ -27,7 +27,7 @@ public class ClassLoader {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        List<Class> c = null;
+        ArrayList<Class> c = new ArrayList();
         for (Class clas : classes) {
             c.add(clas);
         }
