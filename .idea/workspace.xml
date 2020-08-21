@@ -20,12 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f702918d-97dc-4858-853a-a5f050e3c8f0" name="默认的" comment="">
-      <change afterPath="$PROJECT_DIR$/手册.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebTools/ToolsType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebTools/WebTools_ManualTools.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebTools/com/HackerTools/WebTools/ManualTools/request.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/HackerTools/WebTools/ClassLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/HackerTools/WebTools/ClassLoader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebTools/WebTools_BUG.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebTools/WebTools_BUG.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebTools/com/HackerTools/WebTools/BUG/PHPInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebTools/com/HackerTools/WebTools/BUG/PHPInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebTools/com/HackerTools/WebTools/BUG/VCS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebTools/com/HackerTools/WebTools/BUG/VCS.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebToolsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebToolsManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,8 +35,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -155,6 +155,10 @@
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
     <state x="758" y="309" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1620.1040@0.0.1620.1040" timestamp="1595043445310" />
+    <state x="531" y="397" key="#com.intellij.refactoring.memberPushDown.PushDownDialog" timestamp="1598008636851">
+      <screen x="0" y="0" width="1620" height="1040" />
+    </state>
+    <state x="531" y="397" key="#com.intellij.refactoring.memberPushDown.PushDownDialog/0.0.1620.1040@0.0.1620.1040" timestamp="1598008636851" />
     <state x="988" y="414" width="507" height="224" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1595560762726">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
@@ -163,6 +167,10 @@
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
     <state x="541" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1620.1040@0.0.1620.1040" timestamp="1597721654369" />
+    <state x="542" y="271" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1598010445784">
+      <screen x="0" y="0" width="1620" height="1040" />
+    </state>
+    <state x="542" y="271" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1620.1040@0.0.1620.1040" timestamp="1598010445784" />
     <state x="563" y="380" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1595506461539">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
@@ -171,22 +179,22 @@
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
     <state x="592" y="262" key="FileChooserDialogImpl/0.0.1620.1040@0.0.1620.1040" timestamp="1597629854914" />
-    <state width="1562" height="159" key="GridCell.Tab.0.bottom" timestamp="1598007968625">
+    <state width="1562" height="159" key="GridCell.Tab.0.bottom" timestamp="1598012668697">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
-    <state width="1562" height="159" key="GridCell.Tab.0.bottom/0.0.1620.1040@0.0.1620.1040" timestamp="1598007968625" />
-    <state width="1562" height="159" key="GridCell.Tab.0.center" timestamp="1598007968624">
+    <state width="1562" height="159" key="GridCell.Tab.0.bottom/0.0.1620.1040@0.0.1620.1040" timestamp="1598012668697" />
+    <state width="1562" height="159" key="GridCell.Tab.0.center" timestamp="1598012668696">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
-    <state width="1562" height="159" key="GridCell.Tab.0.center/0.0.1620.1040@0.0.1620.1040" timestamp="1598007968624" />
-    <state width="1562" height="159" key="GridCell.Tab.0.left" timestamp="1598007968623">
+    <state width="1562" height="159" key="GridCell.Tab.0.center/0.0.1620.1040@0.0.1620.1040" timestamp="1598012668696" />
+    <state width="1562" height="159" key="GridCell.Tab.0.left" timestamp="1598012668696">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
-    <state width="1562" height="159" key="GridCell.Tab.0.left/0.0.1620.1040@0.0.1620.1040" timestamp="1598007968623" />
-    <state width="1562" height="159" key="GridCell.Tab.0.right" timestamp="1598007968625">
+    <state width="1562" height="159" key="GridCell.Tab.0.left/0.0.1620.1040@0.0.1620.1040" timestamp="1598012668696" />
+    <state width="1562" height="159" key="GridCell.Tab.0.right" timestamp="1598012668696">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
-    <state width="1562" height="159" key="GridCell.Tab.0.right/0.0.1620.1040@0.0.1620.1040" timestamp="1598007968625" />
+    <state width="1562" height="159" key="GridCell.Tab.0.right/0.0.1620.1040@0.0.1620.1040" timestamp="1598012668696" />
     <state width="1562" height="344" key="GridCell.Tab.1.bottom" timestamp="1597722325744">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>

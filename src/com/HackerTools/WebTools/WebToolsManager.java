@@ -2,6 +2,7 @@ package com.HackerTools.WebTools;
 
 import com.HackerTools.WebTools.IP.getIP;
 import com.HackerTools.WebTools.WebTools.WebTools_BUG;
+import com.HackerTools.WebTools.WebTools.WebTools_ManualTools;
 import com.HackerTools.WebTools.WebTools.com.HackerTools.WebTools.BUG.PHPInfo;
 import com.HackerTools.WebTools.WebTools.com.HackerTools.WebTools.BUG.VCS;
 
@@ -116,16 +117,16 @@ public class WebToolsManager {
                     Log_Append(5,"无法访问该URL或该主机名或该IP");
                 }*/
                 try {
-                    if(!new WebToolsAPI("").exists(new URL(ipTextField.getText()).toString())){
-                        Log_Append(3,"无法访问该URL或该主机名或该IP");
+                    if (!new WebToolsAPI("").exists(new URL(ipTextField.getText()).toString())) {
+                        Log_Append(3, "无法访问该URL或该主机名或该IP");
                     }
                 } catch (MalformedURLException malformedURLException) {
                     try {
-                        if(!new WebToolsAPI("").exists(new URL("http://" + ipTextField.getText()).toString())){
-                            Log_Append(3,"无法访问该URL或该主机名或该IP");
+                        if (!new WebToolsAPI("").exists(new URL("http://" + ipTextField.getText()).toString())) {
+                            Log_Append(3, "无法访问该URL或该主机名或该IP");
                         }
                     } catch (MalformedURLException urlException) {
-                        Log_Append(3,"该URL或该主机名或该IP无效");
+                        Log_Append(3, "该URL或该主机名或该IP无效");
                     }
                 }
                 try {
@@ -192,6 +193,51 @@ public class WebToolsManager {
         menuFile.add(menuExit);
         menuBar.add(menuFile);
         menuBar.add(menuTools);
+
+        java.util.List<Class> c = GetClass("com.HackerTools.WebTools.WebTools.WebTools_ManualTools");
+        for (int i = 0; i < c.size(); i++) {
+            Class cl = c.get(i);
+            try {
+                try {
+                    WebToolsAPI API = new WebToolsAPI("");
+                    try {
+                        int port = -1;
+                        try {
+                            port = new URL(ipTextField.getText()).getPort();
+                        } catch (MalformedURLException e) {
+                            try {
+                                port = new URL("http://" + ipTextField.getText()).getPort();
+                            } catch (MalformedURLException malformedURLException) {
+                                malformedURLException.printStackTrace();
+                            }
+                        }
+                        if(port != -1) {
+                            API = new WebToolsAPI(new getIP().getIP_byURL(ipTextField.getText()).getHostAddress(),port);
+                        }else{
+                            API = new WebToolsAPI(new getIP().getIP_byURL(ipTextField.getText()).getHostAddress());
+                        }
+                    } catch (UnknownHostException e) {
+                        e.printStackTrace();
+                    }
+                    WebTools_ManualTools cs = (WebTools_ManualTools) Class.forName(cl.getName()).newInstance();
+                    JMenuItem j = new JMenuItem(cs.init_main()[1]);
+                    WebToolsAPI finalAPI = API;
+                    j.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            cs.start_main(finalAPI);
+                        }
+                    });
+                    menuTools.add(j);
+                } catch (InstantiationException e) {
+                    e.printStackTrace();
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                }
+            } catch (ClassNotFoundException e) {
+            }
+            //TODO 实例化类并调用Judge、Attack方法
+        }
         main_Frame.setJMenuBar(menuBar);
 
         //日志栏
@@ -225,12 +271,12 @@ public class WebToolsManager {
          */
         WebToolsAPI API = new WebToolsAPI(url, port);
         java.util.List<Class> c = GetClass("com.HackerTools.WebTools.WebTools.WebTools_BUG");
-        for(int i=0;i<c.size();i++){
+        for (int i = 0; i < c.size(); i++) {
             Class cl = c.get(i);
             try {
                 try {
-                    WebTools_BUG cs = (WebTools_BUG)Class.forName(cl.getName()).newInstance();
-                    cs.Attack(API,cs.Judge(API));
+                    WebTools_BUG cs = (WebTools_BUG) Class.forName(cl.getName()).newInstance();
+                    cs.Attack(API, cs.Judge(API));
                 } catch (InstantiationException e) {
                     e.printStackTrace();
                 } catch (IllegalAccessException e) {
@@ -250,12 +296,12 @@ public class WebToolsManager {
          */
         WebToolsAPI API = new WebToolsAPI(url);
         java.util.List<Class> c = GetClass("com.HackerTools.WebTools.WebTools.WebTools_BUG");
-        for(int i=0;i<c.size();i++){
+        for (int i = 0; i < c.size(); i++) {
             Class cl = c.get(i);
             try {
                 try {
-                    WebTools_BUG cs = (WebTools_BUG)Class.forName(cl.getName()).newInstance();
-                    cs.Attack(API,cs.Judge(API));
+                    WebTools_BUG cs = (WebTools_BUG) Class.forName(cl.getName()).newInstance();
+                    cs.Attack(API, cs.Judge(API));
                 } catch (InstantiationException e) {
                     e.printStackTrace();
                 } catch (IllegalAccessException e) {
