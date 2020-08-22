@@ -1,11 +1,10 @@
 package com.HackerTools.WebTools;
 
 import com.HackerTools.WebTools.IP.getIP;
-import com.HackerTools.WebTools.WebTools.WebTools_BUG;
 
 import java.net.*;
 
-public class WebToolsAPI extends com.HackerTools.WebTools.IP.getIP{
+public class WebToolsAPI extends com.HackerTools.WebTools.IP.getIP {
     public InetAddress ip_now;
     public URL url_now;
 
@@ -67,7 +66,7 @@ public class WebToolsAPI extends com.HackerTools.WebTools.IP.getIP{
             con.setReadTimeout(1500);
             //从 HTTP 响应消息获取状态码
             return (con.getResponseCode() == HttpURLConnection.HTTP_OK);
-        } catch (java.lang.Throwable e){
+        } catch (java.lang.Throwable e) {
             return false;
         }
     }

@@ -3,8 +3,6 @@ package com.HackerTools.WebTools;
 import com.HackerTools.WebTools.IP.getIP;
 import com.HackerTools.WebTools.WebTools.WebTools_BUG;
 import com.HackerTools.WebTools.WebTools.WebTools_ManualTools;
-import com.HackerTools.WebTools.WebTools.com.HackerTools.WebTools.BUG.PHPInfo;
-import com.HackerTools.WebTools.WebTools.com.HackerTools.WebTools.BUG.VCS;
 
 import javax.swing.*;
 import java.awt.*;
@@ -17,11 +15,9 @@ import java.net.URL;
 import java.net.UnknownHostException;
 import java.nio.file.Files;
 import java.nio.file.attribute.BasicFileAttributes;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import javax.swing.JFrame;
 import java.nio.file.attribute.FileTime;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import static com.HackerTools.WebTools.ClassLoader.GetClass;
 
@@ -31,17 +27,17 @@ import static com.HackerTools.WebTools.ClassLoader.GetClass;
  * @author XiaoLi8848
  */
 public class WebToolsManager {
-    private static double size = 1.0;  //主窗体及控件大小缩放倍数
-    private static int frame_width = (int) (1000 * size);   //主窗体默认宽度
-    private static int frame_height = (int) (1000 * size);  //主窗体默认高度
-    private static String frame_Title = "WebToolsManager - 主菜单";   //窗体标题
-    static Font font_TitleLabel = new Font("宋体", Font.PLAIN, 30);  //标题字体
-    static Font font_Label = new Font("宋体", Font.PLAIN, 25);  //标签字体
-    static Font font_TextField = new Font("宋体", Font.PLAIN, 28); //文本框字体
-    static JFrame main_Frame = new JFrame(frame_Title); //创建主窗体
-    private static JTextField ipTextField = new JTextField("http://www.baidu.com"); //创建IP地址输入框
-    private static JTextArea LogText = new JTextArea(7, 32);    //创建日志文本框
     private static final String VERSION_IP_LOC_DATABASE = "2020年 08月 10日 星期一 22:11:56 CST"; //IP地理位置数据库更新时间
+    public static Font font_TitleLabel = new Font("宋体", Font.PLAIN, 30);  //标题字体
+    public static Font font_Label = new Font("宋体", Font.PLAIN, 25);  //标签字体
+    public static Font font_TextField = new Font("宋体", Font.PLAIN, 28); //文本框字体
+    private static final double size = 1.0;  //主窗体及控件大小缩放倍数
+    private static final int frame_width = (int) (1000 * size);   //主窗体默认宽度
+    private static final int frame_height = (int) (1000 * size);  //主窗体默认高度
+    private static final String frame_Title = "WebToolsManager - 主菜单";   //窗体标题
+    public static JFrame main_Frame = new JFrame(frame_Title); //创建主窗体
+    private static final JTextField ipTextField = new JTextField("http://www.baidu.com"); //创建IP地址输入框
+    private static final JTextArea LogText = new JTextArea(7, 32);    //创建日志文本框
 
     public static void main(String[] args) {
         main_Frame.setLayout(null); //使用绝对布局器
@@ -211,9 +207,9 @@ public class WebToolsManager {
                                 malformedURLException.printStackTrace();
                             }
                         }
-                        if(port != -1) {
-                            API = new WebToolsAPI(new getIP().getIP_byURL(ipTextField.getText()).getHostAddress(),port);
-                        }else{
+                        if (port != -1) {
+                            API = new WebToolsAPI(new getIP().getIP_byURL(ipTextField.getText()).getHostAddress(), port);
+                        } else {
                             API = new WebToolsAPI(new getIP().getIP_byURL(ipTextField.getText()).getHostAddress());
                         }
                     } catch (UnknownHostException e) {

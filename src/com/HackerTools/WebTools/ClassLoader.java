@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.net.JarURLConnection;
 import java.net.URL;
 import java.net.URLDecoder;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
@@ -16,8 +17,8 @@ public class ClassLoader {
     /**
      * 类相关的工具类
      *
-     * @author <a href="mailto:ohergal@gmail.com">ohergal</a>
      * @return
+     * @author <a href="mailto:ohergal@gmail.com">ohergal</a>
      */
 
     public static List<Class> GetClass(String name_Interface) {
@@ -108,7 +109,7 @@ public class ClassLoader {
                 //如果是以文件的形式保存在服务器上
                 if ("file".equals(protocol)) {
                     //获取包的物理路径
-                    String filePath = URLDecoder.decode(url.getFile(), "UTF-8");
+                    String filePath = URLDecoder.decode(url.getFile(), StandardCharsets.UTF_8);
                     //以文件的方式扫描整个包下的文件 并添加到集合中
                     findAndAddClassesInPackageByFile(packageName, filePath, recursive, classes);
                 } else if ("jar".equals(protocol)) {

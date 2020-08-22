@@ -8,6 +8,7 @@ import java.net.URL;
 
 public class VCS implements WebTools_BUG {
     public static int type = 1;
+
     public int Judge(WebToolsAPI API) {
         try {
             URL url1 = new URL(API.url_now + "/CVS/Entriesp");
@@ -29,7 +30,7 @@ public class VCS implements WebTools_BUG {
     }
 
     public int Attack(WebToolsAPI API, int type) {
-        switch(type){
+        switch (type) {
             case 0:
                 return 0;
             case 1:

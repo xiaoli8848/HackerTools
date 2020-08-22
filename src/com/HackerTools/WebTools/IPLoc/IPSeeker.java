@@ -63,52 +63,26 @@ import java.util.List;
  * @author 马若劼
  */
 public class IPSeeker {
-    /**
-     * <pre>
-     * 用来封装ip相关信息，目前只有两个字段，ip所在的国家和地区
-     * </pre>
-     *
-     * @author 马若劼
-     */
-    private class IPLocation {
-        public String country;
-        public String area;
-
-        public IPLocation() {
-            country = area = "";
-        }
-
-        public IPLocation getCopy() {
-            IPLocation ret = new IPLocation();
-            ret.country = country;
-            ret.area = area;
-            return ret;
-        }
-    }
-
     private static final String IP_FILE = IPSeeker.class.getResource("/qqwry.dat").toString().substring(5);
-
     // 一些固定常量，比如记录长度等等
     private static final int IP_RECORD_LENGTH = 7;
     private static final byte AREA_FOLLOWED = 0x01;
     private static final byte NO_AREA = 0x2;
-
+    // 单一模式实例
+    private static final IPSeeker instance = new IPSeeker();
     // 用来做为cache，查询一个ip时首先查看cache，以减少不必要的重复查找
-    private Hashtable ipCache;
+    private final Hashtable ipCache;
     // 随机文件访问类
     private RandomAccessFile ipFile;
     // 内存映射文件
     private MappedByteBuffer mbb;
-    // 单一模式实例
-    private static IPSeeker instance = new IPSeeker();
     // 起始地区的开始和结束的绝对偏移
     private long ipBegin, ipEnd;
     // 为提高效率而采用的临时变量
-    private IPLocation loc;
-    private byte[] buf;
-    private byte[] b4;
-    private byte[] b3;
-
+    private final IPLocation loc;
+    private final byte[] buf;
+    private final byte[] b4;
+    private final byte[] b3;
     /**
      * 私有构造函数
      */
@@ -669,5 +643,28 @@ public class IPSeeker {
         String area = getArea(ip).equals(" CZ88.NET") ? "" : getArea(ip);
         String address = country + " " + area;
         return address.trim();
+    }
+
+    /**
+     * <pre>
+     * 用来封装ip相关信息，目前只有两个字段，ip所在的国家和地区
+     * </pre>
+     *
+     * @author 马若劼
+     */
+    private class IPLocation {
+        public String country;
+        public String area;
+
+        public IPLocation() {
+            country = area = "";
+        }
+
+        public IPLocation getCopy() {
+            IPLocation ret = new IPLocation();
+            ret.country = country;
+            ret.area = area;
+            return ret;
+        }
     }
 }
