@@ -29,11 +29,12 @@ import static com.HackerTools.WebTools.ClassLoader.GetClass;
 public class WebToolsManager {
     private static final String VERSION_IP_LOC_DATABASE = "2020年 08月 10日 星期一 22:11:56 CST"; //IP地理位置数据库更新时间
     public static Font font_TitleLabel = new Font("宋体", Font.PLAIN, 30);  //标题字体
-    public static Font font_Label = new Font("宋体", Font.PLAIN, 25);  //标签字体
-    public static Font font_TextField = new Font("宋体", Font.PLAIN, 28); //文本框字体
-    private static final int frame_width = 1000;   //主窗体默认宽度
-    private static final int frame_height = 1000;  //主窗体默认高度
-    private static final String frame_Title = "WebToolsManager - 主菜单";   //窗体标题
+    public static Font font_Button = new Font("宋体", Font.PLAIN, 17);    //按钮字体
+    public static Font font_Label = new Font("宋体", Font.PLAIN, 20);  //标签字体
+    public static Font font_TextField = new Font("宋体", Font.PLAIN, 22); //文本框字体
+    private static final int frame_width = 700;   //主窗体默认宽度
+    private static final int frame_height = 700;  //主窗体默认高度
+    private static final String frame_Title = "WebToolsManager";   //窗体标题
     public static JFrame main_Frame = new JFrame(frame_Title); //创建主窗体
     private static final JTextField ipTextField = new JTextField("http://www.baidu.com"); //创建IP地址输入框
     private static final JTextArea LogText = new JTextArea(7, 32);    //创建日志文本框
@@ -58,7 +59,7 @@ public class WebToolsManager {
 
         //IP地址输入框
         ipTextField.setFont(font_TextField);
-        ipTextField.setBounds(240, 70, 350, 30);
+        ipTextField.setBounds(200, 70, 350, 30);
         main_Frame.add(ipTextField);
 
         //创建IP地址显示标签
@@ -75,7 +76,7 @@ public class WebToolsManager {
             e.printStackTrace();
         }
         ipLabel.setFont(font_Label);
-        ipLabel.setBounds(65, 100, 200, 50);
+        ipLabel.setBounds(45, 100, 200, 50);
         main_Frame.add(ipLabel);
 
         //创建IP地理位置显示标签
@@ -92,13 +93,13 @@ public class WebToolsManager {
             e.printStackTrace();
         }
         ipLocLabel.setFont(font_Label);
-        ipLocLabel.setBounds(100, 140, 400, 50);
+        ipLocLabel.setBounds(80, 140, 400, 50);
         main_Frame.add(ipLocLabel);
 
         //创建IP地址解析按钮
         JButton ipParseButton = new JButton("Parse");
-        ipParseButton.setFont(font_Label);
-        ipParseButton.setBounds(620, 70, 100, 30);
+        ipParseButton.setFont(font_Button);
+        ipParseButton.setBounds(570, 70, 75, 25);
         JLabel finalIpLabel = ipLabel;
         JLabel finalIpLocLabel = ipLocLabel;
         ipParseButton.addActionListener(new ActionListener() {
@@ -236,7 +237,7 @@ public class WebToolsManager {
 
         //日志栏
         LogText.setFont(font_Label);
-        LogText.setBounds(15, 400, 965, 500);
+        LogText.setBounds(15, 350, 660, 275);
         LogText.setLineWrap(true);
         main_Frame.add(LogText);
 
