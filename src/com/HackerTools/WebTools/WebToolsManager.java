@@ -31,9 +31,8 @@ public class WebToolsManager {
     public static Font font_TitleLabel = new Font("宋体", Font.PLAIN, 30);  //标题字体
     public static Font font_Label = new Font("宋体", Font.PLAIN, 25);  //标签字体
     public static Font font_TextField = new Font("宋体", Font.PLAIN, 28); //文本框字体
-    private static final double size = 1.0;  //主窗体及控件大小缩放倍数
-    private static final int frame_width = (int) (1000 * size);   //主窗体默认宽度
-    private static final int frame_height = (int) (1000 * size);  //主窗体默认高度
+    private static final int frame_width = 1000;   //主窗体默认宽度
+    private static final int frame_height = 1000;  //主窗体默认高度
     private static final String frame_Title = "WebToolsManager - 主菜单";   //窗体标题
     public static JFrame main_Frame = new JFrame(frame_Title); //创建主窗体
     private static final JTextField ipTextField = new JTextField("http://www.baidu.com"); //创建IP地址输入框
@@ -48,7 +47,7 @@ public class WebToolsManager {
         //创建程序标题标签
         JLabel titleLabel = new JLabel(frame_Title, JLabel.CENTER);    //标题文字
         titleLabel.setFont(font_TitleLabel);
-        titleLabel.setBounds((frame_width / 2) - 250, 15, (int) (500 * size), (int) (40 * size));
+        titleLabel.setBounds((frame_width / 2) - 250, 15, 500, 40);
         main_Frame.add(titleLabel);
 
         //创建IP地址框输入标签
@@ -59,7 +58,7 @@ public class WebToolsManager {
 
         //IP地址输入框
         ipTextField.setFont(font_TextField);
-        ipTextField.setBounds(240, 70, (int) (350 * size), (int) (30 * size));
+        ipTextField.setBounds(240, 70, 350, 30);
         main_Frame.add(ipTextField);
 
         //创建IP地址显示标签
@@ -99,7 +98,7 @@ public class WebToolsManager {
         //创建IP地址解析按钮
         JButton ipParseButton = new JButton("Parse");
         ipParseButton.setFont(font_Label);
-        ipParseButton.setBounds(620, 70, (int) (100 * size), (int) (30 * size));
+        ipParseButton.setBounds(620, 70, 100, 30);
         JLabel finalIpLabel = ipLabel;
         JLabel finalIpLocLabel = ipLocLabel;
         ipParseButton.addActionListener(new ActionListener() {
@@ -232,7 +231,6 @@ public class WebToolsManager {
                 }
             } catch (ClassNotFoundException e) {
             }
-            //TODO 实例化类并调用Judge、Attack方法
         }
         main_Frame.setJMenuBar(menuBar);
 
@@ -280,7 +278,6 @@ public class WebToolsManager {
                 }
             } catch (ClassNotFoundException e) {
             }
-            //TODO 实例化类并调用Judge、Attack方法
         }
     }
 
@@ -305,7 +302,6 @@ public class WebToolsManager {
                 }
             } catch (ClassNotFoundException e) {
             }
-            //TODO 实例化类并调用Judge、Attack方法
         }
     }
 

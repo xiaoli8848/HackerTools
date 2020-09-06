@@ -21,13 +21,22 @@
   <component name="ChangeListManager">
     <list default="true" id="f702918d-97dc-4858-853a-a5f050e3c8f0" name="默认的" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/HackerTools/WebTools/ClassLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/HackerTools/WebTools/ClassLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/HackerTools/WebTools/IPLoc/IPSeeker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/HackerTools/WebTools/IPLoc/IPSeeker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebTools/com/HackerTools/WebTools/BUG/PHPInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebTools/com/HackerTools/WebTools/BUG/PHPInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebTools/com/HackerTools/WebTools/BUG/VCS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebTools/com/HackerTools/WebTools/BUG/VCS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/browser/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/browser/.idea/artifacts/JavaFXApp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/browser/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/browser/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/browser/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/browser/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/browser/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/browser/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/browser/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/browser/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/browser/browser.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/browser/out/production/browser/META-INF/browser.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/browser/src/com/HackerTools/browser/browser.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebTools/com/HackerTools/WebTools/ManualTools/request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebTools/com/HackerTools/WebTools/ManualTools/request.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebToolsAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebToolsAPI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebToolsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/HackerTools/WebTools/WebToolsManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/手册.md" beforeDir="false" afterPath="$PROJECT_DIR$/手册.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +49,7 @@
         <option value="Class" />
         <option value="Interface" />
         <option value="Enum" />
+        <option value="AnnotationType" />
       </list>
     </option>
   </component>
@@ -99,8 +109,8 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="应用程序.未命名" />
       <item itemvalue="应用程序.WebToolsManager" />
+      <item itemvalue="应用程序.未命名" />
     </list>
     <recent_temporary>
       <list>
@@ -181,22 +191,22 @@
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
     <state x="592" y="262" key="FileChooserDialogImpl/0.0.1620.1040@0.0.1620.1040" timestamp="1597629854914" />
-    <state width="1562" height="159" key="GridCell.Tab.0.bottom" timestamp="1598055989402">
+    <state width="1562" height="159" key="GridCell.Tab.0.bottom" timestamp="1599326793864">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
-    <state width="1562" height="159" key="GridCell.Tab.0.bottom/0.0.1620.1040@0.0.1620.1040" timestamp="1598055989402" />
-    <state width="1562" height="159" key="GridCell.Tab.0.center" timestamp="1598055989395">
+    <state width="1562" height="159" key="GridCell.Tab.0.bottom/0.0.1620.1040@0.0.1620.1040" timestamp="1599326793864" />
+    <state width="1562" height="159" key="GridCell.Tab.0.center" timestamp="1599326793864">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
-    <state width="1562" height="159" key="GridCell.Tab.0.center/0.0.1620.1040@0.0.1620.1040" timestamp="1598055989395" />
-    <state width="1562" height="159" key="GridCell.Tab.0.left" timestamp="1598055989395">
+    <state width="1562" height="159" key="GridCell.Tab.0.center/0.0.1620.1040@0.0.1620.1040" timestamp="1599326793864" />
+    <state width="1562" height="159" key="GridCell.Tab.0.left" timestamp="1599326793863">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
-    <state width="1562" height="159" key="GridCell.Tab.0.left/0.0.1620.1040@0.0.1620.1040" timestamp="1598055989395" />
-    <state width="1562" height="159" key="GridCell.Tab.0.right" timestamp="1598055989396">
+    <state width="1562" height="159" key="GridCell.Tab.0.left/0.0.1620.1040@0.0.1620.1040" timestamp="1599326793863" />
+    <state width="1562" height="159" key="GridCell.Tab.0.right" timestamp="1599326793864">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
-    <state width="1562" height="159" key="GridCell.Tab.0.right/0.0.1620.1040@0.0.1620.1040" timestamp="1598055989396" />
+    <state width="1562" height="159" key="GridCell.Tab.0.right/0.0.1620.1040@0.0.1620.1040" timestamp="1599326793864" />
     <state width="1562" height="344" key="GridCell.Tab.1.bottom" timestamp="1597722325744">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
